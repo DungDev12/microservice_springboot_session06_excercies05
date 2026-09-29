@@ -23,4 +23,8 @@ public class DoctorService {
                         doctor.getSpecialization()
                 )).toList();
     }
+
+    public Doctor getById(Long id){
+        return doctorRepository.findById(id).orElse(null);
+    }
 }
